@@ -1,0 +1,10 @@
+@mixin d-flex ($display, $justify, $align, $direction) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin border-style ($width, $style, $color) {
+     border: $width $style $color;
+}

@@ -1,0 +1,41 @@
+.box {
+    @extend %size-container;
+    @include d-flex (flex, space-between, center, column);
+    .test1 {
+        &:first-child {
+            color: $color01;
+            margin: $size01;
+            @include border-style (2px, solid, blue);
+        }
+        &:nth-child(2) {
+            color:$color02;
+            padding: $size01;
+
+        }
+        &:last-child {
+            color: $color03;
+        }
+    }
+}
+
+.wraper {
+    @extend %size-container;
+    @include d-flex (flex, space-around, center, row);
+    @media (max-width: 1024px) {
+        @include d-flex (flex, space-between, center, column);
+    }
+    .test_1 {
+        color: green;
+        @media  (max-width: 800px) {
+           color: red;
+        }    
+        @media  (max-width: 480px) {
+            color: blue;
+            font-size: 26px;
+         }    
+    }
+    .test_2 {
+        color: red;
+        font-size: 35px;
+    }
+}
